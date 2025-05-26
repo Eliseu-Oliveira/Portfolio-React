@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply px-6 py-3 font-medium transition-all duration-300 rounded-md;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white;
+  }
+  
+  .section-title {
+    @apply mb-12 text-3xl font-bold text-center md:text-4xl;
+  }
+  
+  .card {
+    @apply overflow-hidden transition-all duration-300 bg-dark-light rounded-xl hover:shadow-xl;
+  }
+}
+
+/* Animações personalizadas */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para o formulário de contato */
+.form-input {
+  @apply w-full px-4 py-3 bg-dark-light border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+/* Estilos para barras de progresso */
+.progress-bar {
+  @apply relative h-4 overflow-hidden bg-dark-light rounded-full;
+}
+
+.progress-bar-fill {
+  @apply absolute top-0 left-0 h-full bg-primary transition-all duration-500;
+}
